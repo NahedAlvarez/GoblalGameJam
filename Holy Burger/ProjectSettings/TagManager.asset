@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hand
+  - Body
+  - Head
   layers:
   - Default
   - TransparentFX
@@ -13,6 +16,16 @@ TagManager:
   - UI
   - 
   - 
+  - player
+  - trigger
+  - props
+  - terrain
+  - culling
+  - shadow
+  - aiVisibility
+  - arcitecture
+  - roomlighting
+  - mouth
   - 
   - 
   - 
@@ -24,18 +37,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - door
+  - handle
   - teleport
   m_SortingLayers:
   - name: Default

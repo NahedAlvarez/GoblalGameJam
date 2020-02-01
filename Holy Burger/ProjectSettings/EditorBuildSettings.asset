@@ -5,12 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/XR Interaction ToolKit/Scenes/WorldInteractionDemo.unity
-    guid: cd5458b6a8920b348b4fbd0dd1cd06f4
   - enabled: 0
-    path: Assets/i8Burger/HolyBurger/Scenes/XR Dev.unity
-    guid: ab6f61deab3cd4e428d0150c01ec1ccb
-  m_configObjects:
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d288d21bb41cb6a44917fcf5fd647937,
-      type: 2}
+    path: Assets/Brennan Hatton/DungeonTrain/Scenes/DungeonTrain.unity
+    guid: a31215fd2729b204688a247a31dc3144
+  - enabled: 1
+    path: Assets/UnityXR/Scenes/Locomotion.unity
+    guid: c69d046fd64aa564c99df7173cd5d122
+  m_configObjects: {}
