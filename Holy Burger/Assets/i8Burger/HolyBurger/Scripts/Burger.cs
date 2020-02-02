@@ -88,7 +88,7 @@ public class Burger : MonoBehaviour, IReseatable
 	
 	IEnumerator WaitUntilEat()
 	{
-		yield return new WaitForSeconds(3f);
+		yield return new WaitForSeconds(1.5f);
 		GameController.Instance.ResetGame();
 		
 	}
