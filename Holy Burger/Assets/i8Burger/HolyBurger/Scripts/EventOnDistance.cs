@@ -34,7 +34,7 @@ public class EventOnDistance : MonoBehaviour
 				return true;
 			}
 		}
-			else
+		else
 		{
 			if(Vector3.Distance(object1.position, object2.position) < distance)
 			{

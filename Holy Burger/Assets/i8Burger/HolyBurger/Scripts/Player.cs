@@ -8,8 +8,9 @@ public class Player : MonoBehaviour,IReseatable
 
     private void Start()
     {
-        AddToList();
-        transform.position = spawnPoint.position;
+	    AddToList();
+	    if(spawnPoint != null)
+        	transform.position = spawnPoint.position;
     }
     
 
