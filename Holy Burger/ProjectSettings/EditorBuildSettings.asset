@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/UnityXR/Scenes/WorldInteractionDemo.unity
     guid: cd5458b6a8920b348b4fbd0dd1cd06f4
   - enabled: 1
+    path: Assets/i8Burger/HolyBurger/Scenes/Start.unity
+    guid: ce5bd9decfbb6974d96304d14995d307
+  - enabled: 1
     path: Assets/i8Burger/HolyBurger/Scenes/XR Dev.unity
     guid: ab6f61deab3cd4e428d0150c01ec1ccb
   - enabled: 0
