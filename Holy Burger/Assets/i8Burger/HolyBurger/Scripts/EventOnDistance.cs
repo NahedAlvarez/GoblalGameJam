@@ -9,6 +9,7 @@ public class EventOnDistance : MonoBehaviour
 	public float distance;
 	public UnityEvent whenDistanceReached = new UnityEvent();
 	public bool onUpdate;
+	public bool furtherThan = false;
 	
     // Start is called before the first frame update
     void Start()
@@ -25,10 +26,21 @@ public class EventOnDistance : MonoBehaviour
     
 	public bool CheckDistance()
 	{
-		if(Vector3.Distance(object1.position, object2.position) < distance)
+		if(furtherThan)
 		{
-			whenDistanceReached.Invoke();
-			return true;
+			if(Vector3.Distance(object1.position, object2.position) > distance)
+			{
+				whenDistanceReached.Invoke();
+				return true;
+			}
+		}
+			else
+		{
+			if(Vector3.Distance(object1.position, object2.position) < distance)
+			{
+				whenDistanceReached.Invoke();
+				return true;
+			}
 		}
 		
 		return false;

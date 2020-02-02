@@ -8,6 +8,8 @@ public class CopyTransform : MonoBehaviour
 	
 	public bool rotation = false;
 	
+	public bool onUpdate = true;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,12 @@ public class CopyTransform : MonoBehaviour
     // Update is called once per frame
 	void Update()
 	{
+		if(onUpdate)
+			Copy();
+	}
+    
+	public void Copy()
+	{
 		if(target == null)
 			return;
     	
@@ -24,5 +32,5 @@ public class CopyTransform : MonoBehaviour
 		
 		if(rotation)
 			this.transform.rotation = target.transform.rotation;
-    }
+	}
 }

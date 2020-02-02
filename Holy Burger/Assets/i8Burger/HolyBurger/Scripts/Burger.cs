@@ -70,17 +70,17 @@ public class Burger : MonoBehaviour, IReseatable
 			AudioManager.Instance.SelectAudio("ingredient");
 		}
 		else 
-		if (col.gameObject.layer == 9)//head
-		{
-			//play eat animation - TO DO
-			///play eat sound - TO DO
-			/// wait time until finished - TO DO
-			/// 
-			//reset game and play sound
+			if (col.gameObject.layer == 9)//head
+			{
+				//play eat animation - TO DO
+				///play eat sound - TO DO
+				/// wait time until finished - TO DO
+				/// 
+				//reset game and play sound
 			
-			AudioManager.instance.SelectAudio("eating");
-			GameController.Instance.ResetGame();
-		}
+				AudioManager.Instance.SelectAudio("eating");
+				GameController.Instance.ResetGame();
+			}
 	}
 	
 	public void AddToList()

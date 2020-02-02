@@ -33,6 +33,9 @@ public class Keys : MonoBehaviour, IReseatable
 	{
 		if(isUsed)
 			return;
+			
+		if(col.gameObject.layer != 11)
+			return;
 		
 		Doors door = col.gameObject.GetComponent<Doors>();
 		
@@ -44,6 +47,14 @@ public class Keys : MonoBehaviour, IReseatable
 				this.transform.GetChild(0).gameObject.SetActive(false);
 				//	this.gameObject.GetComponent<MeshRenderer>().enabled = false;
 		}
+		else //head
+			{
+				Debug.Log("Hit Door");
+			BurgerDoor bd = col.gameObject.GetComponent<BurgerDoor>();
+			
+			if(bd != null)
+				bd.Open();
+			}
 	}
     
 }
