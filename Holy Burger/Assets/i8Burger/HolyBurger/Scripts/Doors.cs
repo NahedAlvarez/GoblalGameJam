@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Doors : MonoBehaviour
 {
     public ingredients keyType;
-    public Collider doorCollider;
+	public Collider doorCollider;
 	public UnityEvent openDoorAction;
 
 	//Called by the editor

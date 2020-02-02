@@ -7,6 +7,7 @@ public class Keys : MonoBehaviour, IReseatable
 	public bool isUsed = false;
 	public ingredients Typeingredients;
 	bool inBurger = false;
+	public bool center = false;
 
     void Start()
 	{

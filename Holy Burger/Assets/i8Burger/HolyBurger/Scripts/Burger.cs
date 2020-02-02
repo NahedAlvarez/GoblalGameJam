@@ -35,12 +35,17 @@ public class Burger : MonoBehaviour, IReseatable
     
 	public void UpdatePositions()
 	{
+		int x = 0;
 		for(int i = 0; i < onBurger.Count; i++)
 		{
-			onBurger[i].GetComponent<CopyTransform>().target = this.positions[i];
+			if(!onBurger[i].center)
+				onBurger[i].GetComponent<CopyTransform>().target = this.positions[i-x];
+			else
+				x++;
 		}
+		
 		//move bun up
-		BunTop.transform.localPosition = this.positions[onBurger.Count].localPosition;
+		BunTop.transform.localPosition = this.positions[onBurger.Count-x].localPosition;
 	}
 	 
     
