@@ -1,11 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+//[RequireComponent(Collider)]
 public class Doors : MonoBehaviour,IReseatable
 {
     public ingredients keyType;
     public Collider doorCollider;
+	public UnityEvent openDoorAction;
+
+	//Called by the editor
+	void Reset()
+	{
+		doorCollider = this.GetComponent<Collider>();
+	}
 
     public void Start()
     {
@@ -17,7 +26,8 @@ public class Doors : MonoBehaviour,IReseatable
         if (key.Typeingredients == keyType && key.isUsed == false)
         {
             key.isUsed = true;
-            doorCollider.enabled = false;
+	        doorCollider.enabled = false;
+	        openDoorAction.Invoke();
         }
     }
 
