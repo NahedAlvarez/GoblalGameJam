@@ -76,7 +76,9 @@ public class Burger : MonoBehaviour, IReseatable
 			///play eat sound - TO DO
 			/// wait time until finished - TO DO
 			/// 
-			//reset game
+			//reset game and play sound
+			
+			AudioManager.instance.SelectAudio("eating");
 			GameController.Instance.ResetGame();
 		}
 	}
