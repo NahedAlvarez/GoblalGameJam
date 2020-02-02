@@ -37,7 +37,9 @@ public class Keys : MonoBehaviour, IReseatable
 		if (door != null)
 		{
 			isUsed = (col.gameObject.GetComponent<Doors>().Open(Typeingredients));
-			this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+			
+			if(isUsed)
+				this.gameObject.GetComponent<MeshRenderer>().enabled = false;
 		}
 	}
     
@@ -45,10 +47,9 @@ public class Keys : MonoBehaviour, IReseatable
 
 public enum ingredients
 {
-Lettuce,
-tomatos,
-Cheese,
-Bons,
-Meat,
-Pickles
+	Lettuce,
+	tomatos,
+	Cheese,
+	Meat,
+	Pickles
 }
