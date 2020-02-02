@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Burger : MonoBehaviour
+public class Burger : MonoBehaviour, IReseatable
 {
 	
 	public List<GameObject> allIngredientsFound = new List<GameObject>();
@@ -13,7 +13,8 @@ public class Burger : MonoBehaviour
 	
     // Start is called before the first frame update
     void Start()
-    {
+	{
+		AddToList();
         
     }
 
@@ -68,11 +69,15 @@ public class Burger : MonoBehaviour
 			/// 
 			//reset game
 			GameController.Instance.ResetGame();
-			ResetBurger();
 		}
 	}
 	
-	void ResetBurger()
+	public void AddToList()
+	{
+		GameController.Instance.resetableObjects.Add(this);
+	}
+	
+	public void ResetObjects()
 	{
 		onBurger = new List<Keys>();
 		
