@@ -53,5 +53,6 @@ Lettuce,
 tomatos,
 Cheese,
 Bons,
-Meat
+Meat,
+Pickles
 }
