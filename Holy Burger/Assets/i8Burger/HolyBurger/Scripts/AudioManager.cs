@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
 	
 	private static AudioManager instance = null;
 	// Game Instance Singleton
-	public static AudioManager InstanceA
+	public static AudioManager Instance
 	{
 		get
 		{
