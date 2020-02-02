@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 608177709}
   object2: {fileID: 1314065267}
-  distance: 0.5
+  distance: 0.75
   whenDistanceReached:
     m_PersistentCalls:
       m_Calls:
@@ -1589,6 +1589,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   onUpdate: 1
+  furtherThan: 0
 --- !u!4 &1314065267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7232708028554517477, guid: 60838d2cfc041e544bcce985a544d8dc,
@@ -1609,7 +1610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 997280794}
   object2: {fileID: 1314065267}
-  distance: 0.5
+  distance: 0.75
   whenDistanceReached:
     m_PersistentCalls:
       m_Calls:
@@ -1637,6 +1638,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   onUpdate: 1
+  furtherThan: 0
 --- !u!1 &1394297881
 GameObject:
   m_ObjectHideFlags: 0
