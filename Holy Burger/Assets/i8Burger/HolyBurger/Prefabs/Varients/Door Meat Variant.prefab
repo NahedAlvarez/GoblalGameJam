@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door Meat Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4783352793127185778, guid: b687a8b25f395ae44a9aa7b966ebde99,
+        type: 3}
+      propertyPath: keyType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4783352793127185779, guid: b687a8b25f395ae44a9aa7b966ebde99,
         type: 3}
       propertyPath: m_LocalPosition.x
