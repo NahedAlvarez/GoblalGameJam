@@ -30,7 +30,7 @@ public class Doors : MonoBehaviour
 	        
 	        return true;
         }
-        
+	    AudioManager.Instance.SelectAudio("locked-door");
 	    return false;
     }
 
