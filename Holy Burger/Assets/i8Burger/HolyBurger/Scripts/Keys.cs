@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Keys : MonoBehaviour,IReseatable
+public class Keys : MonoBehaviour, IReseatable
 {
 	public bool isUsed = false;
 	public ingredients Typeingredients;
@@ -17,7 +17,8 @@ public class Keys : MonoBehaviour,IReseatable
 
     public void ResetObjects()
     {
-        isUsed = false;
+	    isUsed = false;
+	    this.gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 
     public void AddToList()
@@ -36,6 +37,9 @@ public class Keys : MonoBehaviour,IReseatable
 		if (door != null)
 		{
 			isUsed = (col.gameObject.GetComponent<Doors>().Open(Typeingredients));
+			
+			if(isUsed)
+				this.gameObject.GetComponent<MeshRenderer>().enabled = false;
 		}
 	}
     
@@ -43,10 +47,9 @@ public class Keys : MonoBehaviour,IReseatable
 
 public enum ingredients
 {
-Lettuce,
-tomatos,
-Cheese,
-Bons,
-Meat,
-Pickles
+	Lettuce,
+	tomatos,
+	Cheese,
+	Meat,
+	Pickles
 }
