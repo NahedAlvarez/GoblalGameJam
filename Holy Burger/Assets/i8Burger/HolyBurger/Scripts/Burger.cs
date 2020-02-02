@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Burger : MonoBehaviour, IReseatable
 {
@@ -10,6 +11,8 @@ public class Burger : MonoBehaviour, IReseatable
 	public GameObject BunTop, BunBottom;
 	//public float sizeOfIngredients = 0.1f;
 	public Transform[] positions = new Transform[0];
+	
+	public UnityEvent onEat = new UnityEvent();
 	
     // Start is called before the first frame update
     void Start()
@@ -77,10 +80,17 @@ public class Burger : MonoBehaviour, IReseatable
 				/// wait time until finished - TO DO
 				/// 
 				//reset game and play sound
-			
+				onEat.Invoke();
 				AudioManager.Instance.SelectAudio("eating");
-				GameController.Instance.ResetGame();
+				StartCoroutine("WaitUntilEat");
 			}
+	}
+	
+	IEnumerator WaitUntilEat()
+	{
+		yield return new WaitForSeconds(3f);
+		GameController.Instance.ResetGame();
+		
 	}
 	
 	public void AddToList()
