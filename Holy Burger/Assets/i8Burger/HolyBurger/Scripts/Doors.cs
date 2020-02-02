@@ -20,9 +20,9 @@ public class Doors : MonoBehaviour
     {
         doorCollider = GetComponent<Collider>();
     }
-	public bool Open(ingredients keyType)
+	public bool Open(ingredients _keyType)
     {
-        if (keyType == keyType)
+        if (_keyType == keyType)
         {
 	        doorCollider.enabled = false;
 	        openDoorAction.Invoke();
