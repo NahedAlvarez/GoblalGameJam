@@ -1472,6 +1472,36 @@ MonoBehaviour:
   repeats: 0
   onEnable: 0
   repeatOnEnable: 0
+--- !u!114 &1314065265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314065263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90f27303a64c524683a10f97b59c238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 62
+  TimedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1970829595}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  repeats: 0
+  onEnable: 1
+  repeatOnEnable: 0
 --- !u!4 &1314065267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7232708028554517477, guid: 60838d2cfc041e544bcce985a544d8dc,
