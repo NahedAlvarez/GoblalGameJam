@@ -20,11 +20,12 @@ public class Burger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	    for(int i = 0; i < allIngredientsFound.Count; i++)
+	    for(int i = 0; i < onBurger.Count; i++)
 	    {
 	    	if(onBurger[i].isUsed)
 	    	{
 	    		onBurger.RemoveAt(i);
+	    		i--;
 	    		
 	    		UpdatePositions();
 	    	}
@@ -67,7 +68,20 @@ public class Burger : MonoBehaviour
 			/// 
 			//reset game
 			GameController.Instance.ResetGame();
+			ResetBurger();
 		}
+	}
+	
+	void ResetBurger()
+	{
+		onBurger = new List<Keys>();
+		
+		for(int i = 0; i < allIngredientsFound.Count; i++)
+		{
+			onBurger.Add(allIngredientsFound[i].GetComponent<Keys>());
+		}
+		
+		UpdatePositions();
 	}
 	
 }
