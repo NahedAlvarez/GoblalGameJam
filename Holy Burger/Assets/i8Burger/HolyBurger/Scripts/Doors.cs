@@ -21,14 +21,17 @@ public class Doors : MonoBehaviour,IReseatable
         AddToList();
         doorCollider = GetComponent<Collider>();
     }
-    public void Open(Keys key)
+	public bool Open(ingredients keyType)
     {
-        if (key.Typeingredients == keyType && key.isUsed == false)
+        if (keyType == keyType)
         {
-            key.isUsed = true;
 	        doorCollider.enabled = false;
 	        openDoorAction.Invoke();
+	        
+	        return true;
         }
+        
+	    return false;
     }
 
     public void ResetObjects()
