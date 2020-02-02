@@ -24,6 +24,7 @@ public class Doors : MonoBehaviour
     {
         if (_keyType == keyType)
         {
+        	AudioManager.Instance.SelectAudio(ConvertKeyTipeAName(keyType));
 	        doorCollider.enabled = false;
 	        openDoorAction.Invoke();
 	        
@@ -33,4 +34,20 @@ public class Doors : MonoBehaviour
 	    return false;
     }
 
+	string ConvertKeyTipeAName(ingredients key)
+	{
+		switch(key)
+		{
+			case ingredients.Cheese:
+				return "cheese-door";
+			case ingredients.Lettuce:
+				return "lettuce-door";
+			case ingredients.Meat:
+				return "meat-door";
+			case ingredients.tomatos:
+				return "tomato-door";
+			default: 
+				return null;
+		}
+	}
 }

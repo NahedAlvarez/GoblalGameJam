@@ -64,6 +64,7 @@ public class Burger : MonoBehaviour, IReseatable
 			onBurger.Add(col.gameObject.GetComponent<Keys>());
 		
 			UpdatePositions();
+			AudioManager.Instance.SelectAudio("ingredient");
 		}
 		else 
 		if (col.gameObject.layer == 9)//head
