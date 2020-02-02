@@ -5,9 +5,11 @@ using UnityEngine;
 public class Burger : MonoBehaviour
 {
 	
-	public List<GameObject> ingredients = new List<GameObject>();
+	public List<GameObject> allIngredientsFound = new List<GameObject>();
+	public List<Keys> onBurger = new List<Keys>(); 
 	public GameObject BunTop, BunBottom;
-	public float sizeOfIngredients = 0.1f;
+	//public float sizeOfIngredients = 0.1f;
+	public Transform[] positions = new Transform[0];
 	
     // Start is called before the first frame update
     void Start()
@@ -18,9 +20,26 @@ public class Burger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+	    for(int i = 0; i < allIngredientsFound.Count; i++)
+	    {
+	    	if(onBurger[i].isUsed)
+	    	{
+	    		onBurger.RemoveAt(i);
+	    		
+	    		UpdatePositions();
+	    	}
+	    }
     }
     
+	public void UpdatePositions()
+	{
+		for(int i = 0; i < onBurger.Count; i++)
+		{
+			onBurger[i].GetComponent<CopyTransform>().target = this.positions[i];
+		}
+		//move bun up
+		BunTop.transform.localPosition = this.positions[onBurger.Count].localPosition;
+	}
 	 
     
 	private void OnTriggerEnter(Collider col)
@@ -28,22 +47,26 @@ public class Burger : MonoBehaviour
 		if (col.gameObject.layer == 8)
 		{
 			//its already in the burger
-			if(ingredients.Contains(col.gameObject))
+			if(allIngredientsFound.Contains(col.gameObject))
 				return;
-			
-			//move here
-			col.transform.SetParent(this.transform);
-			
+				
 			//turn on kinematic rigidboard
 			col.GetComponent<Rigidbody>().isKinematic = false;
 			
-			//resetposition
-			col.transform.localPosition = Vector3.zero + Vector3.up*sizeOfIngredients * ingredients.Count; 
-			
-			ingredients.Add(col.gameObject);
+			allIngredientsFound.Add(col.gameObject);
+			onBurger.Add(col.gameObject.GetComponent<Keys>());
 		
-			//make bun bigger - TO DO
-			BunTop.transform.localPosition = Vector3.zero + Vector3.up*sizeOfIngredients * ingredients.Count;
+			UpdatePositions();
+		}
+		else 
+		if (col.gameObject.layer == 9)//head
+		{
+			//play eat animation - TO DO
+			///play eat sound - TO DO
+			/// wait time until finished - TO DO
+			/// 
+			//reset game
+			GameController.Instance.ResetGame();
 		}
 	}
 	

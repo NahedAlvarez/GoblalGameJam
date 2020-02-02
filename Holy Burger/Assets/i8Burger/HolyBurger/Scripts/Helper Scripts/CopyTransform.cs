@@ -14,7 +14,10 @@ public class CopyTransform : MonoBehaviour
 
     // Update is called once per frame
 	void Update()
-    {
+	{
+		if(target == null)
+			return;
+    	
 	    this.transform.position = target.transform.position;
     }
 }

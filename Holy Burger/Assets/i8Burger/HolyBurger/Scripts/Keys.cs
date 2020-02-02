@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Keys : MonoBehaviour,IReseatable
 {
-    bool isUsed;
+	public bool isUsed;
 	public ingredients Typeingredients;
 	bool inBurger = false;
 
