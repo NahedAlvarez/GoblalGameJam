@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 //[RequireComponent(Collider)]
-public class Doors : MonoBehaviour,IReseatable
+public class Doors : MonoBehaviour
 {
     public ingredients keyType;
     public Collider doorCollider;
@@ -18,7 +18,6 @@ public class Doors : MonoBehaviour,IReseatable
 
     public void Start()
     {
-        AddToList();
         doorCollider = GetComponent<Collider>();
     }
 	public bool Open(ingredients keyType)
@@ -34,13 +33,4 @@ public class Doors : MonoBehaviour,IReseatable
 	    return false;
     }
 
-    public void ResetObjects()
-    {
-        doorCollider.enabled = true;
-    }
-
-    public void AddToList()
-    {
-        GameController.Instance.resetableObjects.Add(this);
-    }
 }

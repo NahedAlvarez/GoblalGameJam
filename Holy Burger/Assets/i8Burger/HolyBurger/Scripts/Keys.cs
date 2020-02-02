@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Keys : MonoBehaviour,IReseatable
 {
-    bool isUsed;
+	public bool isUsed = false;
 	public ingredients Typeingredients;
 	bool inBurger = false;
 
@@ -13,12 +13,6 @@ public class Keys : MonoBehaviour,IReseatable
 		inBurger = false;
     	
         AddToList();
-    }
-
-    public void OnTake()
-    {
-        
-        gameObject.SetActive(false); 
     }
 
     public void ResetObjects()

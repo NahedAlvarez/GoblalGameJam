@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Reset();
+            ResetGame();
             Debug.Log("Hola Entre a reset de GameController y voy a resetear a" + resetableObjects.Count);
         }
         if (numReset == 0)
@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
         }
 
     }
-    private void Reset()
+	public void ResetGame()
     {
         numReset--;
         foreach (IReseatable r in resetableObjects)
