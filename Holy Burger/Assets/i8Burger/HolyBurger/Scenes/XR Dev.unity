@@ -1333,17 +1333,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 206de92cadf6d544caa13d722db08d8e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.05
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 206de92cadf6d544caa13d722db08d8e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.05
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 206de92cadf6d544caa13d722db08d8e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.05
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -2416733968201007103, guid: 206de92cadf6d544caa13d722db08d8e,
         type: 3}
@@ -2265,8 +2265,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128423342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.76, y: 11.946548, z: -6.4}
-  m_LocalScale: {x: 10, y: 5, z: 1}
+  m_LocalPosition: {x: -11.445, y: 11.946548, z: -6.4}
+  m_LocalScale: {x: 10.629999, y: 5, z: 1}
   m_Children:
   - {fileID: 285953253}
   m_Father: {fileID: 1564656005}
@@ -2507,7 +2507,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key Lettuce
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5938583500545257621, guid: 70a8cf7a6ad53e14faebc32b08e21be5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 70a8cf7a6ad53e14faebc32b08e21be5, type: 3}
 --- !u!4 &1309416083 stripped
 Transform:
@@ -2933,7 +2934,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key Cheese
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5938583500545257621, guid: 70a8cf7a6ad53e14faebc32b08e21be5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 70a8cf7a6ad53e14faebc32b08e21be5, type: 3}
 --- !u!4 &1640333131 stripped
 Transform:
@@ -3822,7 +3824,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Holy Ingredient
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5938583500545257621, guid: 70a8cf7a6ad53e14faebc32b08e21be5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 70a8cf7a6ad53e14faebc32b08e21be5, type: 3}
 --- !u!4 &2084044557 stripped
 Transform:
@@ -4016,6 +4019,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 94790806, guid: 0f90ace7b9c5ac94dae34bc85352e0a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 150736098, guid: 0f90ace7b9c5ac94dae34bc85352e0a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0399
+      objectReference: {fileID: 0}
+    - target: {fileID: 165978913, guid: 0f90ace7b9c5ac94dae34bc85352e0a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0302
+      objectReference: {fileID: 0}
+    - target: {fileID: 487071083, guid: 0f90ace7b9c5ac94dae34bc85352e0a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0188
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813779486, guid: 0f90ace7b9c5ac94dae34bc85352e0a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0454
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850720376, guid: 0f90ace7b9c5ac94dae34bc85352e0a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016699010, guid: 0f90ace7b9c5ac94dae34bc85352e0a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.112
+      objectReference: {fileID: 0}
     - target: {fileID: 3077904708140096048, guid: 0f90ace7b9c5ac94dae34bc85352e0a7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4652,7 +4683,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key Meat
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5938583500545257621, guid: 70a8cf7a6ad53e14faebc32b08e21be5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 70a8cf7a6ad53e14faebc32b08e21be5, type: 3}
 --- !u!1001 &7829822995498931381
 PrefabInstance:
@@ -4703,7 +4735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1205274485, guid: a164782ebfe6fe846acfcd9497d75793, type: 3}
       propertyPath: openDoorAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4610102993130294144, guid: a164782ebfe6fe846acfcd9497d75793,
         type: 3}

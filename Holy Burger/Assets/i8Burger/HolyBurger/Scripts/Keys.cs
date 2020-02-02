@@ -19,7 +19,8 @@ public class Keys : MonoBehaviour, IReseatable
     public void ResetObjects()
     {
 	    isUsed = false;
-	    this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+	    this.transform.GetChild(0).gameObject.SetActive(true);
+	    //this.gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 
     public void AddToList()
@@ -40,7 +41,8 @@ public class Keys : MonoBehaviour, IReseatable
 			isUsed = (col.gameObject.GetComponent<Doors>().Open(Typeingredients));
 			
 			if(isUsed)
-				this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+				this.transform.GetChild(0).gameObject.SetActive(false);
+				//	this.gameObject.GetComponent<MeshRenderer>().enabled = false;
 		}
 	}
     

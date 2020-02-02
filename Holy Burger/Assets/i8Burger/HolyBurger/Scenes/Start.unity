@@ -1475,7 +1475,7 @@ MonoBehaviour:
         m_MethodName: set_clip
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 32900000, guid: 7a2142f669cbd1148bcd100dbcd679be,
+          m_ObjectArgument: {fileID: 32900000, guid: ff7aeffae0a865f45ad6fa757505ba72,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Video.VideoClip, UnityEngine
           m_IntArgument: 0
